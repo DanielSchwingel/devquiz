@@ -6,16 +6,35 @@ import 'package:flutter/rendering.dart';
 
 class QuizCardWidget extends StatelessWidget {
   final String title;
+  final String image;
   final String completed;
   final double percent;
   final VoidCallback onTap;
 
-  const QuizCardWidget({
+  QuizCardWidget({
     required this.title, 
+    required this.image,
     required this.completed, 
     required this.percent,
     required this.onTap
-  });
+  }) : assert(['data', 'laptop', 'hierarchy', 'blocks'].contains(image)) ;
+
+  final config = {
+    'data': {
+      'image': AppImages.data 
+    },
+    'laptop': {
+      'image': AppImages.laptop
+    },
+    'hierarchy': {
+      'image': AppImages.hierarchy
+    },
+    'blocks': {
+      'image': AppImages.blocks
+    }
+  };
+
+  String get imageCard => config[image]!['image']!;
 
   @override
   Widget build(BuildContext context) {
@@ -39,7 +58,7 @@ class QuizCardWidget extends StatelessWidget {
               Container(
                 width: 40,
                 height: 40,
-                child: Image.asset(AppImages.blocks),
+                child: Image.asset(imageCard),
               ),
               SizedBox(
                 height: 24,

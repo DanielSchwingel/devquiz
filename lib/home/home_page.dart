@@ -35,6 +35,9 @@ class _HomePageState extends State<HomePage> {
             padding: const EdgeInsets.symmetric(horizontal: 20),
             child: Column(
               children: [
+                SizedBox(
+                  height: 10,
+                ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -45,7 +48,7 @@ class _HomePageState extends State<HomePage> {
                   ],
                 ),
                 SizedBox(
-                  height: 24,
+                  height: 10,
                 ),
                 Expanded(
                   child: GridView.count(
@@ -55,6 +58,7 @@ class _HomePageState extends State<HomePage> {
                     children: 
                       controller.quizzes!.map((e) => QuizCardWidget(
                         title: e.title,
+                        image: e.imagem,
                         percent: e.questionAnswered/e.questions.length,
                         completed: '${e.questionAnswered}/${e.questions.length}',
                         onTap: (){
