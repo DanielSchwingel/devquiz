@@ -7,6 +7,12 @@
 # devquiz
 Application developed at # NLW5. 🚀
 
+<p align="center">
+  <a href="https://github.com/DanielSchwingel/devquiz">
+    <img src=".github/devquiz.gif"/>
+  </a>
+</p>
+
  <p align="center">
  <img src="https://img.shields.io/github/issues/DanielSchwingel/devquiz?style=for-the-badge"/>
  <img src="https://img.shields.io/github/forks/DanielSchwingel/devquiz?style=for-the-badge"/>
